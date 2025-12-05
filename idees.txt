@@ -1,4 +1,18 @@
-L1 (Lasso)
-cardinalité
+Comprendre exactement comment focntionne nos algo et savoir répondre sur tout nos choix d'un pts de vu mathématique
 
-Est ce qu'on ne peut pas relaxer une contrainte de cardinalité sur un portefeuille d'actions optimisé avec le modèle de marchovischtk avec L1 ? si oui, sous quelles conditions ?
+L1 (Lasso) mettre les poid a 0
+cardinalité choisisr combien on veut de poid pas a 0 par exemple 10
+
+Est ce qu'on ne peut pas relaxer une contrainte de cardinalité sur un portefeuille
+d'actions optimisé avec le modèle de marchovischtk avec L1 ? si oui, sous quelles conditions ?
+
+est ce que il faut centrer la matrice des rendement? surment oui
+
+PCA analogie avec le risque matrice de covariance etc. pca on veut maximiser la covariance ici la minimiser pour le risque.
+
+covariance entre - et + infini donne le sens et corrélation entre - et + 1 donne un ordre de grandeur en plus;
+covariance quand on centre la matrice M et correlation quand on centre et on réduit M
+
+peut etre rajouter une colonne dans le dataset qui dit dans quelle secteur sont les actif energie, financials etc. 
+
+partie 1 probleme convexe et partie 2 non convexe
