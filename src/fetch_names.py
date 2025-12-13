@@ -19,11 +19,10 @@ def fetch_names():
         sector_map = json.load(f)
         
     tickers = list(sector_map.keys())
-    print(f"Fetching names for {len(tickers)} tickers...")
+    print(f"Fetching names for {len(tickers)} tickers")
     
     ticker_names = {}
     
-    # Check if we already have some names to avoid refetching everything if it failed
     if os.path.exists(output_path):
         try:
             with open(output_path, 'r') as f:

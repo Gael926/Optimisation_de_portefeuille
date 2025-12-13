@@ -125,12 +125,12 @@ class PortfolioProblem(ElementwiseProblem):
         out["F"] = [f1, f2, f3]
         # On pourrait aussi retourner le "w" décodé si besoin, mais NSGA2 travaille sur les gènes "x"
 
-def optimize_moo(mu, sigma, k_card, trans_cost, pop_size=50, n_gen=50):
+def optimize_moo(mu, sigma, k_card, trans_cost, w_prev=None, pop_size=50, n_gen=50):
     """
     Lance l'optimisation NSGA-II.
     Retourne les résultats (Front de Pareto).
     """
-    problem = PortfolioProblem(mu, sigma, k_card=k_card, trans_cost=trans_cost)
+    problem = PortfolioProblem(mu, sigma, k_card=k_card, trans_cost=trans_cost, w_prev=w_prev)
     algorithm = NSGA2(pop_size=pop_size)
     termination = get_termination("n_gen", n_gen)
     

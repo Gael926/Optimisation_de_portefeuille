@@ -1,9 +1,6 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-mlruns/
-models/
-!models/.gitkeep
 .env
 .venv/
 venv/
