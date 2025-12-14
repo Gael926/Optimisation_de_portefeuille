@@ -34,28 +34,36 @@ Le projet est organisé en trois niveaux de complexité croissante :
 
 ---
 
-## Installation et Guide de Démarrage
+## Installation et Démarrage
 
 ### Pré-requis
-*   Python 3.8+
-*   Dépendances (voir `requirements.txt` si existant, sinon installer les libs ci-dessous) :
-    ```bash
-    pip install numpy pandas matplotlib seaborn plotly yfinance pymoo scipy streamlit
-    ```
+Une des deux options suivantes :
+*   **Option 1 (Docker)** : [Docker Desktop](https://www.docker.com/products/docker-desktop) installé.
+*   **Option 2 (Local)** : Python 3.12+ installé.
 
-### Lancer l'Application Streamlit
+### Installation
 
-Pour faciliter le lancement du dashboard interactif, un script automatique est fourni.
+#### Via Docker (Recommandé)
+Pour lancer le projet sans rien installer sur votre machine :
 
-**Méthode 1 (Recommandée - Windows) :**
-Double-cliquez simplement sur le fichier :
-👉 **`run_app.bat`**
-
-**Méthode 2 (Ligne de commande) :**
-Ouvrez un terminal à la racine du projet et exécutez :
 ```bash
+# Construction de l'image
+docker build -t finance-app .
+
+# Lancement de l'application
+docker run -p 8501:8501 finance-app
+```
+> L'application sera accessible sur `http://localhost:8501`.
+
+#### Via Python (Local)
+Si vous préférez l'installation manuelle :
+
+```bash
+pip install -r requirements.txt
+python src/prepare_data.py
 python -m streamlit run streamlit_app.py
 ```
+---
 
 ### Explorer les Notebooks
 Pour comprendre la logique et voir les analyses détaillées :

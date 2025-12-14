@@ -12,7 +12,7 @@ project_root = current_dir
 if project_root not in sys.path:
     sys.path.append(project_root)
 
-from src.portfolio_lib import optimize_markowitz, optimize_moo, resampling_efficient_frontier, get_rend_vol_sr
+from src.portfolio_lib import optimize_moo
 
 st.set_page_config(page_title="Optimisation de Portefeuille", page_icon="📈", layout="wide")
 
