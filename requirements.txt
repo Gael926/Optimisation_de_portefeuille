@@ -9,6 +9,6 @@ jupyter
 yfinance
 tqdm
 pymoo
-streamlit
+streamlit>=1.40.0
 plotly
 pytest
